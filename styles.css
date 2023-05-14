@@ -244,7 +244,7 @@ body {
 
 .apollo__info .person__img {
   min-height: 250px;
-  background: url(imgs/apollo_info.jpg) center no-repeat;
+  background: url(imgs/apollo.webp) center no-repeat;
   background-size: cover;
 }
 
