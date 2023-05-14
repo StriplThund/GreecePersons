@@ -42,6 +42,7 @@ body {
 
 /* #region StatueCards */
 .main {
+  min-width: 670px;
   margin: 20px auto;
   max-width: 1200px;
   min-height: calc(100vh - var(--header-height) - var(--footer-height));
