@@ -58,7 +58,7 @@ body {
 }
 
 .cards__container {
-  gap: 20px;
+  gap: 1rem;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
   box-sizing: border-box;
@@ -66,9 +66,9 @@ body {
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 15px;
-  height: 600px;
-  
+  min-height: 600px;
 }
+
 
 .cardholder{
   position: relative;
@@ -81,7 +81,6 @@ body {
 .card__apollo {
   grid-row-start: 1;
   grid-row-end: 3;
-  overflow: hidden;
 }
 
 .content{
@@ -270,4 +269,69 @@ body {
 .footer p {
   text-align: center;
   color: #3a3a3a;
+}
+
+@media (max-width: 1000px){
+  .cards__container {
+    grid-template-columns: 1.5fr 1fr;
+  }
+  .main {
+    min-width: 20rem;
+  }
+  .cards__container .card__img{
+    height: 100%;
+    background-position: top;
+    transition-duration: .3s;
+  }
+  .card__venus .card__img{
+    background-position: center;
+  }
+  .cardholder .card__img:hover {
+    background-position: 0 10%;
+  }
+  .card__venus .card__img:hover{
+    background-position: 0 55%;
+  }
+  .card__aurelius .card__img{
+    background-position: 0 30%;
+  }
+  .card__aurelius .card__img:hover{
+    background-position: 0 40%;
+  }
+}  
+@media (max-width: 675px){
+  .cards__container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cardholder{
+    height: 150px;
+  }
+  .cards__container .card__img{
+    background-position: center;
+    transition-duration: .3s;
+  }
+  .card__apollo {
+    height: 20rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .info__wrapper {
+    flex-direction: column-reverse;
+  }
+  .info__wrapper .person__img {
+    background-position: top;
+    height: 30rem;
+  }
+  .ares__info .info__wrapper .person__img {
+    background-position: bottom;
+  }
+  .zeus__info .person__desc {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .cardholder .card__img:hover {
+    background-position: 10% 45%;
+  }
 }
