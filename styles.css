@@ -1,13 +1,13 @@
 body {
   --header-height: 70px;
   --footer-height: 75px;
+  min-width: 446px
 }
 
 /* #region Header */
 
 .header {
-  background-color: #000dff; 
-
+  background-color: #000dff;
   height: var(--header-height);
   line-height: var(--header-height);
 }
@@ -15,6 +15,7 @@ body {
 .nav {
   max-width: 1200px;
   margin: 0 auto;
+  min-width: 446px
 }
 
 .nav__list {
@@ -156,7 +157,7 @@ body {
 }
 
 .person__img {
-  min-width: 250px;
+  min-width: 15rem;
   border-radius: 15px;
   transition: .3s;
 }
@@ -300,6 +301,10 @@ body {
   }
 }  
 @media (max-width: 675px){
+  .person__desc {
+    line-height: 1.15;
+    font-size: 14px;
+  }
   .cards__container {
     grid-template-columns: 1fr 1fr;
   }
@@ -315,6 +320,10 @@ body {
     grid-column-start: 1;
     grid-column-end: 3;
   }
+  .card__apollo .card__img {
+    background-position: 0 20%;
+  }
+  
   .info__wrapper {
     flex-direction: column-reverse;
   }
@@ -333,5 +342,15 @@ body {
   }
   .cardholder .card__img:hover {
     background-position: 10% 45%;
+  }
+
+  .card__apollo .card__img:hover {
+    background-position: 0 18%;
+  }
+  .card__aurelius .card__img{
+    background-position: 0 30%;
+  }
+  .card__aurelius .card__img:hover{
+    background-position: 0 25%;
   }
 }
